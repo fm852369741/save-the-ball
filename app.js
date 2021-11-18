@@ -171,7 +171,6 @@ window.addEventListener("click", (e) => {
 
 animate();
 
-
 function Restart() {
   particles = []
   enemies = []
