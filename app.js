@@ -6,6 +6,8 @@ let particles = [];
 let animationID = undefined;
 let score = 0;
 
+
+
 let enemySize = 1;
 let difficuly = 0.5;
 
@@ -111,6 +113,7 @@ function animate() {
 
       if (distance - projectile.radius - enemy.radius < 1) {
         score += 100;
+        document.querySelector('.score-text').innerHTML = score;
 
         for (let i = 0; i < enemy.radius * 2; i++) {
           particles.push(new Particle(
