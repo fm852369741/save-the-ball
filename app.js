@@ -6,6 +6,8 @@ let particles = [];
 let animationID = undefined;
 let score = 0;
 
+let enemySize = 1;
+let difficuly = 0.5;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -35,15 +37,15 @@ function animate() {
     const angle = Math.atan2(player.y - y, player.x - x);
 
     const velocity = {
-      x: Math.cos(angle) * 2,
-      y: Math.sin(angle) * 2,
+      x: Math.cos(angle) * difficuly,
+      y: Math.sin(angle) * difficuly,
     };
 
     enemies.push(
       new Enemy({
         x: x,
         y: y,
-        radius: Math.random() * (window.innerWidth/60 - 10) + 10,
+        radius: Math.random() * (window.innerWidth/60 - 10) + 10 + enemySize,
         color: `hsl(${Math.floor(Math.random() * 360)}, 50%, 50%)`,
         velocity: velocity,
       })
@@ -179,3 +181,13 @@ function Restart() {
 
   animate();
 }
+
+setInterval(() => {
+  if (difficuly < 3) {
+    difficuly += 0.25;
+  }
+
+  if (enemySize < 10) {
+    enemySize += 1;
+  }
+}, 1000);
