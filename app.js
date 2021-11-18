@@ -13,7 +13,7 @@ canvas.height = window.innerHeight;
 const player = new Player({
   x: canvas.width / 2,
   y: canvas.height / 2,
-  radius: innerWidth/60,
+  radius: window.innerWidth/60,
   color: "white",
 });
 
