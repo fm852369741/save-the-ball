@@ -13,7 +13,7 @@ canvas.height = window.innerHeight;
 const player = new Player({
   x: canvas.width / 2,
   y: canvas.height / 2,
-  radius: 30,
+  radius: innerWidth/60,
   color: "white",
 });
 
@@ -160,8 +160,8 @@ window.addEventListener("click", (e) => {
     new Projectile({
       x: player.x,
       y: player.y,
-      radius: innerWidth/60,
-      color: 'pink',
+      radius: 3,
+      color: player.radius,
       velocity: velocity,
     })
   );
