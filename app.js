@@ -161,7 +161,7 @@ window.addEventListener("click", (e) => {
       x: player.x,
       y: player.y,
       radius: 8,
-      color: player.color,
+      color: 'pink',
       velocity: velocity,
     })
   );
