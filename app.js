@@ -169,6 +169,8 @@ window.addEventListener("click", (e) => {
   );
 });
 
+console.log(window.innerWidth / 250);
+
 animate();
 
 
