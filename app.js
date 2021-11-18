@@ -25,11 +25,11 @@ function animate() {
     let y;
 
     if (Math.random() < 0.5) {
-      x = Math.random() < 0.5 ? 0 - player.radius : canvas.width + player.radius;;
+      x = Math.random() < 0.5 ? 0 - player.radius : canvas.width + player.radius;
       y = Math.random() * canvas.height;
     } else {
       x = Math.random() * canvas.width;
-      y = Math.random() < 0.5 ? 0 - player.radius : canvas.height + player.radius;;
+      y = Math.random() < 0.5 ? 0 - player.radius : canvas.height + player.radius;
     }
 
     const angle = Math.atan2(player.y - y, player.x - x);
@@ -43,7 +43,7 @@ function animate() {
       new Enemy({
         x: x,
         y: y,
-        radius: Math.random() * (40 - 10) + 10,
+        radius: Math.random() * (window.innerWidth/60 - 10) + 10,
         color: `hsl(${Math.floor(Math.random() * 360)}, 50%, 50%)`,
         velocity: velocity,
       })
