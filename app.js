@@ -162,7 +162,7 @@ window.addEventListener("click", (e) => {
     new Projectile({
       x: player.x,
       y: player.y,
-      radius: window.innerHeight / 250,
+      radius: window.innerWidth / 250,
       color: player.radius,
       velocity: velocity,
     })
